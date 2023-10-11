@@ -56,7 +56,7 @@ function App() {
       </div>
      <div className='temp'>
       {data.main ? <h1>{data.main.temp.toFixed()}{'\u00b0'}c</h1> :null }
-      {data.main ?<p>{renderDate()}</p> : null}
+      {data.main ?<h5>{renderDate()}</h5> : null}
       {data.weather ?<img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="Image" className='weathicon'/> :null }
       </div>
       <div className='description'>
