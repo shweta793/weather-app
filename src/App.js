@@ -70,7 +70,8 @@ function App() {
       <div className="container">
       <div className="top">
       <div className='location'>
-        <p>{data.name}</p>
+        {data.sys ?<p>{data.name},{data.sys.country}</p>: null}
+        
         
       </div>
      <div className='temp'>
@@ -94,7 +95,7 @@ function App() {
         <p>Humidity</p>
       </div>
       <div className='wind'>
-      {data.wind ? <p className='bold'>{`${data.wind.speed.toFixed()}${units==="metric" ? "MPS" : "MPH"} `} </p> : null }
+      {data.wind ? <p className='bold'>{`${data.wind.speed.toFixed()} ${units==="metric" ? "M/S" : "MPH"} `} </p> : null }
         <p>Wind</p>
       </div>
     </div>
